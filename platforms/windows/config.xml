@@ -10,7 +10,6 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <preference name="WindowsToastCapable" value="true" />
     <preference name="windows-target-version" value="UAP" />
     <preference name="uap-target-min-version" value="10.0.15063.0" />
     <preference name="Windows.Universal-MinVersion" value="10.0.15063.0" />

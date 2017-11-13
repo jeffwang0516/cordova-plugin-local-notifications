@@ -15,19 +15,19 @@
     <Import Condition="Exists('$(MSBuildThisFileDirectory)CordovaAppRelease.projitems') And '$(Configuration)'!='Debug'" Project="CordovaAppRelease.projitems" />
     <ItemGroup>
         <Reference Condition="'$(Platform)'=='x86'" Include="LocalNotificationProxy">
-            <HintPath>plugins/cordova-plugin-local-notifications/x86/LocalNotificationProxy.winmd</HintPath>
+            <HintPath>plugins/cordova-plugin-local-notification/x86/LocalNotificationProxy.winmd</HintPath>
             <IsWinMDFile>true</IsWinMDFile>
         </Reference>
     </ItemGroup>
     <ItemGroup>
         <Reference Condition="'$(Platform)'=='x64'" Include="LocalNotificationProxy">
-            <HintPath>plugins/cordova-plugin-local-notifications/x64/LocalNotificationProxy.winmd</HintPath>
+            <HintPath>plugins/cordova-plugin-local-notification/x64/LocalNotificationProxy.winmd</HintPath>
             <IsWinMDFile>true</IsWinMDFile>
         </Reference>
     </ItemGroup>
     <ItemGroup>
         <Reference Condition="'$(Platform)'=='ARM'" Include="LocalNotificationProxy">
-            <HintPath>plugins/cordova-plugin-local-notifications/ARM/LocalNotificationProxy.winmd</HintPath>
+            <HintPath>plugins/cordova-plugin-local-notification/ARM/LocalNotificationProxy.winmd</HintPath>
             <IsWinMDFile>true</IsWinMDFile>
         </Reference>
     </ItemGroup>
