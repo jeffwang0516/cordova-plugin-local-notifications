@@ -136,6 +136,15 @@ exports.mergeWithDefaults = function (options) {
  */
 exports.convertProperties = function (options) {
 
+    var parseToInt = function (prop, options) {
+        if (isNaN(options[prop])) {
+            console.warn(prop + ' is not a number: ' + options[prop]);
+            return this._defaults[prop];
+        } else {
+            return Number(options[prop]);
+        }
+    };
+    
     if (options.id) {
         if (isNaN(options.id)) {
             options.id = this.getDefaults().id;
