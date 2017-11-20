@@ -38,7 +38,8 @@ exports._defaults = {
     id:    0,
     data:  undefined,
     every: undefined,
-    at:    undefined
+    at:    undefined,
+    priority: 0
 };
 
 // listener
@@ -69,6 +70,7 @@ exports.applyPlatformSpecificOptions = function () {
         defaults.autoClear = true;
         defaults.led       = undefined;
         defaults.color     = undefined;
+        defaults.priority  = 0;
         break;
     }
 
@@ -180,6 +182,10 @@ exports.convertProperties = function (options) {
             warning += 'month, year on iOS.';
             console.warn(warning);
         }
+    }
+
+    if (options.priority) {
+        options.priority = parseToInt('priority', options);
     }
 
     return options;

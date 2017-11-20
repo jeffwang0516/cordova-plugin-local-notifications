@@ -28,6 +28,8 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
+import static android.support.v4.app.NotificationCompat.PRIORITY_MAX;
+import static android.support.v4.app.NotificationCompat.PRIORITY_MIN;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -334,4 +336,12 @@ public class Options {
         return options.toString();
     }
 
+    /**
+     * Gets the notifications priority.
+     */
+    int getPriority() {
+        int prio = options.optInt("priority");
+
+        return Math.min(Math.max(prio, PRIORITY_MIN), PRIORITY_MAX);
+    }
 }
